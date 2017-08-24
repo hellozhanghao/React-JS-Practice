@@ -8,26 +8,26 @@ export default class App extends Component {
 
   state = {
     todos: ['Click to remove', 'Learn React', 'Write Code', 'Ship App'],
-  }
+  };
 
   onAddTodo = (text) => {
-    const {todos} = this.state
+    const {todos} = this.state;
 
     this.setState({
       todos: [text, ...todos],
     })
-  }
+  };
 
   onRemoveTodo = (index) => {
-    const {todos} = this.state
+    const {todos} = this.state;
 
     this.setState({
       todos: todos.filter((todo, i) => i !== index),
     })
-  }
+  };
 
   render() {
-    const {todos} = this.state
+    const {todos} = this.state;
 
     return (
       <div style={styles.container}>
@@ -52,4 +52,4 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
   }
-}
+};

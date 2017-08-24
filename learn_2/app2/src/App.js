@@ -10,12 +10,12 @@ class Line extends Component {
     first : '',
     second: '',
     result: '',
-  }
+  };
 
   handleSubmit = (e)=>{
     e.preventDefault();
     console.log("Called");
-  }
+  };
 
 
   handleChange1 =(event) =>{
@@ -24,14 +24,14 @@ class Line extends Component {
     console.log(this.props);
     this.setState({first:event.target.value});
     this.setState({result:event.target.value*this.state.second})
-  }
+  };
 
   handleChange2 =(event) =>{
     const {second} = this.state;
     console.log(event.target.value);
     this.setState({second:event.target.value});
     this.setState({result:event.target.value*this.state.first})
-  }
+  };
 
   render() {
     return (
@@ -123,6 +123,6 @@ const styles = {
     alignItems:'space-between'
   }
 
-}
+};
 
 export default Line

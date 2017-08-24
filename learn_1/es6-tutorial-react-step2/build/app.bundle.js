@@ -118,10 +118,8 @@
 	
 	    return Header;
 	}(_react2.default.Component);
-	
-	;
-	
-	var AmortizationChart = function (_React$Component2) {
+
+        var AmortizationChart = function (_React$Component2) {
 	    _inherits(AmortizationChart, _React$Component2);
 	
 	    function AmortizationChart() {
@@ -213,10 +211,8 @@
 	
 	    return AmortizationChart;
 	}(_react2.default.Component);
-	
-	;
-	
-	var App = function (_React$Component3) {
+
+        var App = function (_React$Component3) {
 	    _inherits(App, _React$Component3);
 	
 	    function App(props) {
@@ -249,10 +245,8 @@
 	
 	    return App;
 	}(_react2.default.Component);
-	
-	;
-	
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector(".app"));
+
+        _reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector(".app"));
 
 /***/ }),
 /* 1 */
@@ -625,7 +619,7 @@
 			// Detect buggy property enumeration order in older V8 versions.
 	
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc'); // eslint-disable-line no-new-wrappers
+			var test1 = String('abc'); // eslint-disable-line no-new-wrappers
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
@@ -8641,13 +8635,13 @@
 	 *   var MyComponent = React.createClass({
 	 *     render: function() {
 	 *       return (
-	 *         <div onClick={this.handleClick}>
+	 *         <div onClick={this.handleChange}>
 	 *           <CustomComponent ref="custom" />
 	 *         </div>
 	 *       );
 	 *     },
-	 *     handleClick: function() {
-	 *       this.refs.custom.handleClick();
+	 *     handleChange: function() {
+	 *       this.refs.custom.handleChange();
 	 *     },
 	 *     componentDidMount: function() {
 	 *       this.refs.custom.initialize();
@@ -10534,7 +10528,7 @@
 	   * Updates a component's children by processing a series of updates. The
 	   * update configurations are each expected to have a `parentNode` property.
 	   *
-	   * @param {array<object>} updates List of update configurations.
+	   * @param {array<object>} updates View of update configurations.
 	   * @internal
 	   */
 	  processUpdates: function processUpdates(parentNode, updates) {
@@ -11472,7 +11466,7 @@
 	  /**
 	   * Updates a component's children by processing a series of updates.
 	   *
-	   * @param {array<object>} updates List of update configurations.
+	   * @param {array<object>} updates View of update configurations.
 	   * @internal
 	   */
 	  dangerouslyProcessChildrenUpdates: function dangerouslyProcessChildrenUpdates(parentInst, updates) {
@@ -19232,7 +19226,7 @@
 	   * @see Transaction
 	   * @abstract
 	   * @final
-	   * @return {array<object>} List of operation wrap procedures.
+	   * @return {array<object>} View of operation wrap procedures.
 	   *   TODO: convert to array<TransactionWrapper>
 	   */
 	  getTransactionWrappers: function getTransactionWrappers() {
@@ -22396,10 +22390,8 @@
 	
 	    return MortgageCalculator;
 	}(React.Component);
-	
-	;
-	
-	exports.default = MortgageCalculator;
+
+        exports.default = MortgageCalculator;
 
 /***/ })
 /******/ ]);

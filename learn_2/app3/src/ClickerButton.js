@@ -3,10 +3,10 @@ import { render } from 'react-dom'
 
 class CounterButton extends Component {
 
-  state = {count: 0}
+  state = {count: 0};
 
   render() {
-    const {count} = this.state
+    const {count} = this.state;
 
     return (
       <button type='button' onClick={() => this.setState({count: count + 1})}>

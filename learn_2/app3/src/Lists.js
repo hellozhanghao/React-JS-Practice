@@ -5,7 +5,7 @@ const data = [
   {id: 'a', name: 'Devin'},
   {id: 'b', name: 'Gabe' },
   {id: 'c', name: 'Kim'},
-]
+];
 
 class List extends Component {
   render() {

@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 
 class Card extends Component {
   renderContent() {
-    const {title, subtitle} = this.props
+    const {title, subtitle} = this.props;
 
     return (
       <div>
@@ -18,9 +18,9 @@ class Card extends Component {
   }
 
   render() {
-    const {loading, error} = this.props
+    const {loading, error} = this.props;
 
-    let content
+    let content;
 
     if (error) {
       content = 'Error'
@@ -74,7 +74,7 @@ const styles = {
     lineHeight: '15px',
     opacity: 0.5,
   }
-}
+};
 
 
 export default App

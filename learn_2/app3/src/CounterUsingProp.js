@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 
 class CounterButton extends Component {
   render() {
-    const {onPress, children} = this.props
-    console.log({onPress, children})
+    const {onPress, children} = this.props;
+    console.log({onPress, children});
 
     return (
       <button type='button' onClick={onPress}>
@@ -16,16 +16,16 @@ class CounterButton extends Component {
 
 class App extends Component {
 
-  state = {count: 0}
+  state = {count: 0};
 
   handlePress = () => {
-    const {count} = this.state
+    const {count} = this.state;
 
     this.setState({count: count + 1})
-  }
+  };
 
   render() {
-    const {count} = this.state
+    const {count} = this.state;
 
     return (
       <CounterButton

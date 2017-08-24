@@ -3,14 +3,14 @@ import { render } from 'react-dom'
 
 class Input extends Component {
 
-  state = {value: ''}
+  state = {value: ''};
 
   handleChange = (e) => {
     this.setState({value: e.target.value})
-  }
+  };
 
   render() {
-    const {value} = this.state
+    const {value} = this.state;
 
     return (
       <div>

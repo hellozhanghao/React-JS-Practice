@@ -61,6 +61,6 @@ class MortgageCalculator extends React.Component {
             </div>
         );
     }
-};
+}
 
 export default MortgageCalculator;

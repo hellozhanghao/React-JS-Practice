@@ -5,16 +5,16 @@ class Card extends Component {
   state = {
     width: null,
     height: null,
-  }
+  };
 
   saveRef = (ref) => {
     this.containerNode = ref
     // console.log(this.containerNode)
 
-  }
+  };
 
   measure() {
-    const {clientWidth, clientHeight} = this.containerNode
+    const {clientWidth, clientHeight} = this.containerNode;
     console.log({clientWidth});
 
     this.setState({
@@ -40,7 +40,7 @@ class Card extends Component {
 
   render() {
 
-    const {width, height} = this.state
+    const {width, height} = this.state;
 
     return (
       <div
@@ -73,6 +73,6 @@ const styles = {
     fontSize: 14,
     lineHeight: '18px',
   },
-}
+};
 
 export default Card

@@ -22,7 +22,7 @@ class Box extends Component{
       flexDirection:"row",
       justifyContent: "center",
       alignItems:"center",
-    }
+    };
 
     return(
       <div style={style} >Rectangle {this.props.number}</div>
@@ -57,10 +57,10 @@ class App extends Component {
 
 class CounterButton extends Component {
 
-  state = {count: 0}
+  state = {count: 0};
 
   render() {
-    const {count} = this.state
+    const {count} = this.state;
 
     return (
       <button type='button' onClick={() => this.setState({count: count + 1})}>
@@ -82,7 +82,7 @@ const styles={
     padding:"10px",
 
   }
-}
+};
 
 
 

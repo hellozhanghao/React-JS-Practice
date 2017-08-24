@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 
 class Counter extends Component {
 
-  state = {count: 0}
+  state = {count: 0};
 
   componentDidMount() {
     setInterval(() => {
@@ -12,8 +12,8 @@ class Counter extends Component {
   }
 
   render() {
-    const {count} = this.state
-    const {color, size} = this.props
+    const {count} = this.state;
+    const {color, size} = this.props;
 
     return (
       <div style={{color, fontSize: size}}>
@@ -29,7 +29,7 @@ class App extends Component {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-    }
+    };
 
     return (
       <div style={style}>
