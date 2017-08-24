@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 
-
 export default class List extends Component{
 
     handleChange = (key, event) =>{
@@ -12,11 +11,7 @@ export default class List extends Component{
         this.props.removeItemCallback(key);
     };
 
-
-
-
-    renderItems = () =>{
-
+    render(){
         return(
             <list >
                 {this.props.items.map((item,key) =>
@@ -24,19 +19,17 @@ export default class List extends Component{
                         key={key} >
                         <input
                             key = {key}
-                            style={this.props.buttonStyle}
+                            style={this.props.checkboxStyle}
                             type="checkbox"
-                            ref = {key}
                             checked={item.completed}
-                            onClick={
-                                (evt) => this.handleChange(key, evt)
-                            }
-                            />
+                            onClick={(evt) => this.handleChange(key, evt)}/>
+
                         <div
                             className={item.completed ? "strike":""}
                             style={this.props.textEntryStyle}>
                             {item.name}
                         </div>
+
                         <input
                             className="css_btn_class"
                             style={this.props.buttonStyle}
@@ -46,12 +39,6 @@ export default class List extends Component{
                     </li>)
                 }
             </list>
-        )
-    };
-
-    render(){
-        return(
-            this.renderItems()
         )
     }
 }

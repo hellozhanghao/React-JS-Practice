@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../shopping-list/src/Header.js"],"names":["Header"],"mappings":";;;;;;AAAA;;;;;;;;;;;;IAEqBA,M;;;AACjB,sBAAa;AAAA;;AAAA;AAEZ;;;;;kBAHgBA,M","file":"Header.js","sourcesContent":["import React, {Component} from 'react';\n\nexport default class Header extends Component{\n    constructor(){\n        super()\n    }\n}"]}

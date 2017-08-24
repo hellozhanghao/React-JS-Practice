@@ -8,10 +8,9 @@ export default class Summary extends Component{
     render(){
         return(
             <p style={this.props.style}>
-                Progress: {this.props.completed} / {this.props.total}
+                Progress: {this.props.count} / {this.props.total}
             </p>
         )
     }
-
 
 }

@@ -77,12 +77,13 @@ export default class App extends Component {
                     style = {styles.view}
                     textEntryStyle = {styles.textEntry}
                     buttonStyle = {styles.button}
+                    checkboxStyle = {styles.checkbox}
                     items = {this.state.items}
                     updateItemCallback = {this.onItemUpdate}
                     removeItemCallback = {this.onItemRemoval}/>
                 <Summary
                     style = {styles.summary}
-                    completed = {count}
+                    count = {count}
                     total = {this.state.items.length}/>
             </div>
 
@@ -132,6 +133,11 @@ const styles = {
         display: 'flex',
         flex:1,
         margin:2
+    },
+    checkbox:{
+        display: 'flex',
+        flex:1,
+        alignItems:'flex-start'
     },
     summary:{
         padding: 15,
