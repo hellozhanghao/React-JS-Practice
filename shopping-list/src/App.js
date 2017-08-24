@@ -13,11 +13,13 @@ export default class App extends Component {
             items:[
                 {
                     name:"Orange",
-                    completed:false
+                    completed:false,
+                    editing:false,
                 },
                 {
                     name:"Apple",
-                    completed:false
+                    completed:false,
+                    editing:false,
                 }]}
     }
 
@@ -48,11 +50,27 @@ export default class App extends Component {
         this.setState({
             items:items
         });
-        this.render();
+        // this.render();
     };
 
+    onEditItemClickedCallback = (key) =>{
+        let {items} = this.state;
+        items[key].editing = true;
+        this.setState({
+            items:items
+        });
+    };
 
-    countCompleted =()=>{
+    editItemCallback = (key,value) =>{
+        let {items} = this.state;
+        items[key].editing = false;
+        items[key].name = value;
+        this.setState({
+            items:items
+        });
+    };
+
+    countCompletedNumber =()=>{
         let count = 0;
         for(let i=0;i<this.state.items.length;i++){
             if (this.state.items[i].completed){
@@ -65,7 +83,7 @@ export default class App extends Component {
 
     render() {
         console.log(this.state.items)
-        const count = this.countCompleted();
+        const count = this.countCompletedNumber();
         return (
             <div className="App">
                 <Header
@@ -80,17 +98,18 @@ export default class App extends Component {
                     checkboxStyle = {styles.checkbox}
                     items = {this.state.items}
                     updateItemCallback = {this.onItemUpdate}
-                    removeItemCallback = {this.onItemRemoval}/>
+                    removeItemCallback = {this.onItemRemoval}
+                    editButtonClickedCallback = {this.onEditItemClickedCallback}
+                    editItemCallback = {this.editItemCallback}
+                />
                 <Summary
                     style = {styles.summary}
                     count = {count}
                     total = {this.state.items.length}/>
             </div>
-
         )
     }
 }
-
 
 const styles = {
     header: {
@@ -104,18 +123,11 @@ const styles = {
         fontSize:"40px",
         font:""
     },
-    input: {
-        padding: 5,
-        borderWidth: 5,
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        backgroundColor:'#6ED2FF',
-    },
     view:{
         padding: 10,
         borderWidth: 5,
         display:'flex',
+        flexDirection:'row',
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:"#22BAFF"
@@ -129,7 +141,7 @@ const styles = {
     button:{
         display: 'flex',
         flex:1,
-        margin:2
+        margin:1
     },
     checkbox:{
         display: 'flex',

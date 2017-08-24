@@ -2,17 +2,18 @@ import React, {Component} from 'react';
 import './App.css';
 
 
-export default class InputText extends Component{
+export default class EditText extends Component{
     constructor(props){
         super(props);
         this.state = {
-            input:"",
+            input:this.props.old,
         }
     }
 
     handleClick = () => {
         const {input} =  this.state;
-        this.props.callbackFromParent({input});
+        this.props.editItemCallback(this.props.id, input);
+        // console.log(this.props);
         this.setState({input:""});
     };
 
@@ -31,14 +32,14 @@ export default class InputText extends Component{
                     className="textin"
                     style={styles.input}
                     type="text"
-                    placeholder="Enter your next item"
+                    placeholder="Edit your item"
                     value={input}
                     onChange={this.handleTextChange}/>
                 <button
                     style={styles.button}
                     className="css_btn_class"
                     onClick={this.handleClick}>
-                    Add
+                    Save
                 </button>
             </div>
 
@@ -67,6 +68,6 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        backgroundColor:'#6ED2FF',
+        backgroundColor:'#22BAFF',
     },
 }
