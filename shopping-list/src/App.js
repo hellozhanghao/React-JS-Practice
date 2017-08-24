@@ -92,8 +92,6 @@ export default class App extends Component {
 }
 
 
-
-
 const styles = {
     header: {
         padding: 15,
@@ -107,7 +105,7 @@ const styles = {
         font:""
     },
     input: {
-        padding: 15,
+        padding: 5,
         borderWidth: 5,
         display: 'flex',
         flexDirection: 'row',
@@ -122,9 +120,8 @@ const styles = {
         alignItems:'center',
         backgroundColor:"#22BAFF"
     },
-
     textEntry:{
-        padding: 5,
+        padding: 6,
         display: 'flex',
         flex:6,
         flexWrap: 'wrap'
@@ -136,7 +133,6 @@ const styles = {
     },
     checkbox:{
         display: 'flex',
-        flex:1,
         alignItems:'flex-start'
     },
     summary:{

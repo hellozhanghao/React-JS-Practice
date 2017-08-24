@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import removeIcon from './remove-icon-png-7132-16x16.ico'
 
 export default class List extends Component{
 
@@ -30,12 +31,11 @@ export default class List extends Component{
                             {item.name}
                         </div>
 
-                        <input
+                        <img
                             className="css_btn_class"
-                            style={this.props.buttonStyle}
-                            type="submit"
-                            value="Remove"
-                            onClick={()=>this.handleRemove(key)}/>
+                            src = {removeIcon}
+                            onClick={()=>this.handleRemove(key)}
+                        />
                     </li>)
                 }
             </list>
