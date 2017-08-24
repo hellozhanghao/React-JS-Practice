@@ -69,4 +69,4 @@ const styles = {
         justifyContent: 'space-around',
         backgroundColor:'#6ED2FF',
     },
-}
+};

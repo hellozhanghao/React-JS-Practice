@@ -27,7 +27,7 @@ export default class App extends Component {
         if (dataFromChild.input !==""){
             this.setState({
                 items:[...this.state.items,
-                    {name:dataFromChild.input,completed:false}]})
+                    {name:dataFromChild.input,completed:false,editing:false}]})
         }
     };
 
@@ -80,9 +80,8 @@ export default class App extends Component {
         return count;
     };
 
-
     render() {
-        console.log(this.state.items)
+        console.log(this.state.items);
         const count = this.countCompletedNumber();
         return (
             <div className="App">

@@ -47,8 +47,6 @@ export default class EditText extends Component{
     }
 }
 
-
-
 const styles = {
     input:{
         display:"flex",
@@ -70,4 +68,4 @@ const styles = {
         justifyContent: 'space-around',
         backgroundColor:'#22BAFF',
     },
-}
+};
