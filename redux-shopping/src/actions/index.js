@@ -23,3 +23,19 @@ export const deleteItem = id => {
     }
 };
 
+
+export const toggleEdit = id => {
+    return{
+        type: 'TOGGLE_EDIT',
+        id
+    }
+};
+
+export const updateItem = (id,text) =>{
+    return{
+        type: "UPDATE_ITEM",
+        id,
+        text
+    }
+}
+

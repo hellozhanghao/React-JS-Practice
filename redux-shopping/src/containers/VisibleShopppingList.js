@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-// import TodoList from '../components/TodoList'
 import ShoppingList from '../components/ShoppingList'
 import { toggleItem } from '../actions'
-
-
+import {deleteItem} from "../actions";
+import {toggleEdit} from "../actions";
+import {updateItem} from "../actions";
 
 
 const mapStateToProps = state => {
@@ -15,8 +15,18 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onClick: id => {
-            dispatch(toggleItem(id))
+            dispatch(toggleItem(id));
+        },
+        onDelete: id =>{
+            dispatch(deleteItem(id));
+        },
+        onToggleEdit: id =>{
+            dispatch(toggleEdit(id))
+        },
+        onUpdateItem:(id,text) =>{
+            dispatch(updateItem(id,text))
         }
+
     }
 };
 

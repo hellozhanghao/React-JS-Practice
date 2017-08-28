@@ -8,35 +8,23 @@ import './App.css';
 import Header from './containers/Header'
 import InputText from './containers/InputText'
 import VisibleShoppingList from './containers/VisibleShopppingList'
+import Footer from './containers/Footer'
 
 
 
 const App = () => (
-    <div>
-        {/*<AddTodo />*/}
-        {/*<VisibleTodoList />*/}
-        {/*<Footer />*/}
-        <Header style = {style.header}/>
+    <div className="App">
+
+        <Header/>
         <InputText/>
         <VisibleShoppingList/>
+        <Footer/>
 
 
     </div>
 );
 
 
-const style = {
-    header: {
-        padding: 15,
-        display: 'flex',
-        flex:1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems:'center',
-        backgroundColor:"#115D7F",
-        fontSize:"40px",
-        font:""
-    }
-};
+
 
 export default App

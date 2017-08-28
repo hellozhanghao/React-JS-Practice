@@ -1,17 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addItem } from '../actions'
-
-import '../App.css';
+import { updateItem } from '../actions'
 
 
-let InputText = ({ dispatch}) => {
 
+let InputText = ({ dispatch, id}) => {
 
     let input;
 
     return (
-        <div  >
+        <div >
             <form
                 style={styles.container}
                 onSubmit={e => {
@@ -19,7 +17,7 @@ let InputText = ({ dispatch}) => {
                     if (!input.value.trim()) {
                         return
                     }
-                    dispatch(addItem(input.value));
+                    dispatch(updateItem(id,input.value));
                     input.value = ''
                 }}
             >
@@ -34,7 +32,7 @@ let InputText = ({ dispatch}) => {
                     style={styles.button}
                     className="css_btn_class"
                     type="submit">
-                    Add
+                    Apply
                 </button>
 
 
@@ -66,6 +64,7 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-around',
         backgroundColor:'#6ED2FF',
+        margin:0
     },
     textEntry:{
         padding: 6,
@@ -73,7 +72,4 @@ const styles = {
         flex:6,
         flexWrap: 'wrap'
     },
-    body:{
-        margin:0
-    }
 };

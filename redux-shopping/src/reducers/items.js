@@ -9,7 +9,8 @@ const items = (state = [], action) => {
                     id: action.id,
                     text: action.text,
                     completed: false,
-                    deleted:false
+                    deleted:false,
+                    editing:false
                 }
             ];
         case 'TOGGLE_ITEM':
@@ -19,10 +20,28 @@ const items = (state = [], action) => {
                     : item
             );
 
-        // case 'DELETE_TODO':
-        //     let items =[...state];
-        //     items.splice(action.id,1);
-        //     return items;
+        case 'DELETE_ITEM':
+            return state.map(item =>
+                (item.id === action.id)
+                    ? {...item, deleted: true}
+                    : item
+            );
+
+        case 'TOGGLE_EDIT':
+            return state.map(item =>
+                (item.id === action.id)
+                    ? {...item, editing: true}
+                    : item
+            );
+
+
+        case "UPDATE_ITEM":
+            return state.map(item =>
+                (item.id === action.id)
+                    ? {...item, text: action.text, editing:false}
+                    : item
+            );
+
         default:
             return state
     }
